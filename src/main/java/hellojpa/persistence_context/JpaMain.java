@@ -44,12 +44,12 @@ public class JpaMain {
      * @param em
      */
     private static void sameEntityObjectWithUpdate(EntityManager em) {
-        Member a = em.find(Member.class, 2L);
+        Member a = em.find(Member.class, 1L);
 
         //update 발생
         a.setName("memberBBB");
 
-        Member b = em.find(Member.class, 2L);
+        Member b = em.find(Member.class, 1L);
 
         System.out.println(a.equals(b));
         System.out.println(a == b);
